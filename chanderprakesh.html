@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chanderprakash — Resume & Portfolio</title>
+
+<style>
+body { font-family: Arial; margin:0; padding:0; background:#f4f4f4; }
+header { background:#0d6efd; color:white; padding:25px; text-align:center; }
+section { padding:20px; margin:10px; background:white; border-radius:10px; }
+h2 { color:#0d6efd; margin-top:0; }
+input, select, textarea { width:100%; padding:10px; margin-top:6px; margin-bottom:10px; border-radius:6px; border:1px solid #ccc; }
+button { background:#2563eb; color:white; padding:12px; border:none; border-radius:8px; cursor:pointer; width:100%; }
+button:hover { background:#1e40af; }
+footer { text-align:center; padding:12px; background:#222; color:white; }
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Chanderprakash</h1>
+<p>Web Designer | HTML | CSS | javascript | Responsive</p>
+</header>
+
+<section>
+<h2>Project Requirement Form</h2>
+
+<form id="contactForm">
+<label>Name</label>
+<input type="text" name="name" placeholder="Your Name" required>
+
+<label>Email</label>
+<input type="email" name="email" placeholder="Your Email" required>
+
+<label>Project Type</label>
+<select name="project_type" required>
+<option value="Portfolio Website">Portfolio Website</option>
+<option value="Business Website">Business Website</option>
+<option value="Personal Profile Site">Personal Profile Site</option>
+<option value="Other">Other</option>
+</select>
+
+<label>Requirement Details</label>
+<textarea name="details" rows="4" placeholder="Describe your requirement" required></textarea>
+
+<button type="submit">Submit Requirement</button>
+</form>
+</section>
+
+<section>
+<h2>Quick Contact</h2>
+<button id="whatsappBtn">Contact via WhatsApp</button>
+</section>
+
+<footer>
+<p>© 2025 Chanderprakash</p>
+</footer>
+
+<script>
+const emailReceiver = "chanderpraksh@gmail.com";
+
+// Form Submit → Mail App
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const form = e.target;
+
+  const subject = encodeURIComponent("New Website Requirement");
+  const body = encodeURIComponent(
+    `Name: ${form.name.value}\nEmail: ${form.email.value}\nProject Type: ${form.project_type.value}\nDetails: ${form.details.value}`
+  );
+
+  window.location.href = `mailto:${emailReceiver}?subject=${subject}&body=${body}`;
+  alert("Email draft prepared. Please send using your mail app.");
+  form.reset();
+});
+
+// WhatsApp Button
+document.getElementById("whatsappBtn").addEventListener("click", function(){
+  const phone = "916367291211"; // यहाँ अपना मोबाइल नंबर डालें
+  const text = encodeURIComponent("Hello Chanderprakash, I want a website. Please contact me.");
+  window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+});
+</script>
+
+</body>
+</html>
