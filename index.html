@@ -60,7 +60,7 @@ footer { text-align:center; padding:12px; background:#222; color:white; }
 
 <script>
 const emailReceiver = "chanderprakshnain@gmail.com";
-
+window.location.href = mailto:${emailReceiver}?subject=${subject}&body=${body};
 // Form Submit → Mail App
 document.getElementById("contactForm").addEventListener("submit", function(e){
   e.preventDefault();
@@ -87,3 +87,4 @@ document.getElementById("whatsappBtn").addEventListener("click", function(){
 </body>
 
 </html>
+
