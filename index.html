@@ -26,6 +26,8 @@ footer { text-align:center; padding:12px; background:#222; color:white; }
 
 <section>
 <h2>Project Requirement Form</h2>
+
+
 <form id="contactForm">
 <label>Name</label>
 <input type="text" name="name" placeholder="Your Name" required>
@@ -78,14 +80,11 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
 
 // WhatsApp Button
 document.getElementById("whatsappBtn").addEventListener("click", function(){
-  const phone = "916367291211"; 
+  const phone = "916367291211"; // यहाँ अपना मोबाइल नंबर डालें
   const text = encodeURIComponent("Hello Chanderprakash, I want a website. Please contact me.");
   window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
 });
 </script>
 
 </body>
-
 </html>
-
-
