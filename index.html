@@ -26,22 +26,27 @@ footer { text-align:center; padding:12px; background:#222; color:white; }
 
 <section>
 <h2>Project Requirement Form</h2>
+<form id="contactForm">
+<label>Name</label>
+<input type="text" name="name" placeholder="Your Name" required>
 
-<form action="https://formspree.io/f/abcdxyz" method="POST">
-  <label>Your Name</label>
-  <input type="text" name="name" required>
+<label>Email</label>
+<input type="email" name="email" placeholder="Your Email" required>
 
-  <label>Your Email</label>
-  <input type="email" name="email" required>
+<label>Project Type</label>
+<select name="project_type" required>
+<option value="Portfolio Website">Portfolio Website</option>
+<option value="Business Website">Business Website</option>
+<option value="Personal Profile Site">Personal Profile Site</option>
+<option value="Other">Other</option>
+</select>
 
-  <label>Project Type</label>
-  <input type="text" name="project_type" required>
+<label>Requirement Details</label>
+<textarea name="details" rows="4" placeholder="Describe your requirement" required></textarea>
 
-  <label>Requirement Details</label>
-  <textarea name="details" required></textarea>
-
-  <button type="submit">Submit Requirement</button>
+<button type="submit">Submit Requirement</button>
 </form>
+
 </section>
 
 <section>
